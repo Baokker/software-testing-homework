@@ -1,26 +1,26 @@
 from questions import question1, question2, question4, question7, question9, question10, question11, question15, question16, question17
 
-def explain(question_id):
+def manual_test(question_id):
     if question_id == 1:
-        question1.explain()
+        question1.manual_test()
     elif question_id == 2:
-        question2.explain()
+        question2.manual_test()
     elif question_id == 4:
-        question4.explain()
+        question4.manual_test()
     elif question_id == 7:
-        question7.explain()
+        question7.manual_test()
     elif question_id == 9:
-        question9.explain()
+        question9.manual_test()
     elif question_id == 10:
-        question10.explain()
+        question10.manual_test()
     elif question_id == 11:
-        question11.explain()
+        question11.manual_test()
     elif question_id == 15:
-        question15.explain()
+        question15.manual_test()
     elif question_id == 16:
-        question16.explain()
+        question16.manual_test()
     elif question_id == 17:
-        question17.explain()
+        question17.manual_test()
     else:
         print("查不到此问题编号")
 
@@ -118,7 +118,7 @@ def show_menu():
             print("您选择的测试方式是：", test_type)
 
             if test_type == 1:
-                explain(question_id)
+                manual_test(question_id)
             elif test_type == 2:
                 auto_test(question_id)
             elif test_type == 3:
