@@ -1,4 +1,6 @@
-from questions import question1, question2, question4, question7, question9, question10, question11, question15, question16, question17
+from questions import question1, question2, question4, question7, question9, question10, question11, question15, \
+    question16, question17
+
 
 def manual_test(question_id):
     if question_id == 1:
@@ -77,6 +79,7 @@ def explain(question_id):
 
 question_id_list = [1, 2, 4, 7, 9, 10, 11, 15, 16, 17]
 
+
 def show_menu():
     while True:
         print("请输入数字选择问题（如输入1选择问题1：")
@@ -86,7 +89,7 @@ def show_menu():
         print("4. 电脑销售系统")
         print("7. 电信收费问题系统")
         print("9. 判断三角形类型（等价类方法分别分析和设计测试用例）")
-        print("10. 万年历问题（用状态转换图设计测试用例）")
+        print("10. 万年历问题（等价类方法分别分析和设计测试用例）")
         print("11. 万年历问题（用决策表设计测试用例，将年份划分成：非闰年，被4整除不被100整除的闰年和被400整除的闰年）")
         print("15. 设计ATM的系统状态图，设计出逻辑测试用例")
         print("16. 按照C语言程序前的编号，构建起程序图")
@@ -96,12 +99,12 @@ def show_menu():
             question_id = int(input())
 
             if question_id == 0:
-                for id in question_id_list:
-                    print("您选择的问题是：", id)
+                for i in question_id_list:
+                    print("您选择的问题是：", i)
                     print("本问题解释说明如下：")
-                    explain(id)
+                    explain(i)
                     print("本问题自动测试如下：")
-                    auto_test(id)
+                    auto_test(i)
 
             if question_id not in question_id_list:
                 print("输入错误，请重新选择！")
@@ -127,8 +130,9 @@ def show_menu():
                 continue
             else:
                 print("输入错误，请重新选择！")
-            
+
         except ValueError:
             print("输入错误，请重新选择！")
+
 
 show_menu()
