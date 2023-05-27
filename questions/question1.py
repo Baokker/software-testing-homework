@@ -31,12 +31,10 @@ def manual_test():
 
 def auto_test():
     data = np.loadtxt(open("testData/triangle_equivalenceclass.csv"), delimiter=",", usecols=[1, 2, 3])
-    #data_t = np.loadtxt(open("testData/triangle_equivalenceclass.csv"), delimiter=",", usecols=[4])
     print("question 1 auto test")
     for data_row in data:
         print("本次自动测试的数据为 %d %d %d" % (data_row[0], data_row[1], data_row[2]))
         print("输出结果为：" + triangle_atom(data_row[0], data_row[1], data_row[2]))
-        #print("解释说明：" + data_row[3])
     # 自动测试的函数实现
     pass
 
@@ -44,6 +42,16 @@ def auto_test():
 def explain():
     # 解释说明的函数实现
     print("更多的解释说明见作业文档")
+    print('''在本题中，测试用例的输入变量有
+- 三角形三条边的长度（0< a,b,c <=800）
+测试输出有
+- 三角形种类
+若采用边界值分析，对a、b、c分别取min，min+，normal，max-，max。得到三个取值集合:
+- a,b,c = [1, 2, 400, 799, 800]
+若增加健壮性分析，对每个集合再分别增加min-,max+，可得:
+- a,b,c = [0, 1, 2, 400, 799, 800, 801]
+
+共有6*3+1=19个测试用例,所以共有19个测试用例。''')
 
 
 if __name__ == "__main__":
