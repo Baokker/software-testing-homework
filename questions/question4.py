@@ -96,6 +96,14 @@ def explain():
 
 
 if __name__ == "__main__":
-    manual_test()
-    auto_test()
+    while True:
+        choice = input("请选择测试类型，1为手动测试，2为自动测试：")
+        if choice == '1':
+            manual_test()
+            break
+        elif choice == '2':
+            auto_test()
+            break
+        else:
+            print("选择有误，请重新输入")
     explain()
