@@ -93,8 +93,8 @@ def auto_test():
         year = int(data_row[0])
         month = int(data_row[1])
         day = int(data_row[2])
-        print("输入的年月日为：%d 年 %d 月 %d 日" % (year,month,day))
-        print("测试结果为：" + get_calender(year,month,day))
+        print("输入的年月日为：%d 年 %d 月 %d 日" % (year, month, day))
+        print("测试结果为：" + get_calender(year, month, day))
     # 自动测试的函数实现
     pass
 
@@ -119,6 +119,14 @@ def explain():
 
 
 if __name__ == "__main__":
-    manual_test()
-    auto_test()
+    while True:
+        choice = input("请选择测试类型，1为手动测试，2为自动测试：")
+        if choice == '1':
+            manual_test()
+            break
+        elif choice == '2':
+            auto_test()
+            break
+        else:
+            print("选择有误，请重新输入")
     explain()
