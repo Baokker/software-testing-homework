@@ -90,7 +90,7 @@ def auto_test():
     print("自动测试")
     print("采用决策表法")
     print("测试用例：")
-    with open('../testData/calendar_DecisionTable.csv', 'r') as f:
+    with open('testData/calendar_DecisionTable.csv', 'r') as f:
         reader = csv.reader(f)
         # 跳过标题行
         next(reader)

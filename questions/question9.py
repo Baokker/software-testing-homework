@@ -45,7 +45,7 @@ def manual_test():
 
 def auto_test():
     # 自动测试的函数实现
-    data = np.loadtxt(open("../testData/triangle_equivalenceclass.csv"), delimiter=",", usecols=[1, 2, 3])
+    data = np.loadtxt(open("testData/triangle_equivalenceclass.csv"), delimiter=",", usecols=[1, 2, 3])
     print("自动测试")
     for data_row in data:
         print("本次自动测试的数据为 %g %g %g" % (data_row[0], data_row[1], data_row[2]))
